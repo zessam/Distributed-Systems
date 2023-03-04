@@ -1,75 +1,87 @@
-import java.lang.*;
 import java.util.*;
+import java.lang.Math;
+// code ga7ed yst72 bonus
+// coding for grades :)
 
 public class App {
 
-    double num1;
-    double num2;
-    double res;
+    private double num1;  // el access modifier 7naka ana 3arf eno private by default 
+    private double num2;
+    private double roootno;
 
-
-    public void in() {
+    public void in() {                                           // dy function hta5od el ar2am talma m4 el op m4 sqrt
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the first number:");
-        num1= scan.nextDouble();
+        num1 = scan.nextDouble();
         System.out.println("Enter the second number:");
-        num2= scan.nextDouble();
+        num2 = scan.nextDouble();
+        scan.close();
+    }
+
+    public void in_root() {                 // dy function el sqrt
+        Scanner scanroot = new Scanner(System.in);
+        System.out.println("Enter root number:");
+        roootno = scanroot.nextDouble();
+        scanroot.close();
 
     }
-   
-    public double addition(int x, int y) 
-    {    
+
+    public double addition(double x, double y) { // function el addition
         return num1 + num2;
     }
 
-    public double subtraction(int x, int y) 
-    {    
+    public double subtraction(double x, double y) {         // function el subtraction
         return num1 - num2;
     }
-    
-    public double multiplication(int x, int y) 
-    {    
+
+    public double multiplication(double x, double y) {      // function el multiplication
         return num1 * num2;
     }
 
-    public double divide(int x, int y) 
-    {    
+    public double divide(double x, double y) {     // function el division
         return num1 / num2;
     }
 
-    public static void main (String[] args)
-    {
+    public double squ_are_ro_ot(double x) { // function el square root
+        return Math.sqrt(roootno);
+    }
 
-        App c = new App(); 
+    public static void main(String[] args) {
+
+        App c = new App();
         String op;
         Scanner scanop = new Scanner(System.in);
         System.out.println("Enter your desired operation:");
-        op= scanop.next();
-
-        c.in();
-       
-        
-       
-        
+        op = scanop.next();
 
         switch (op) {
             case "+":
-            System.out.println("Summation: "+  c.addition(0, 0));
+                c.in();
+                System.out.println("Summation: " + c.addition(0, 0));
                 break;
             case "-":
-            System.out.println("Subtraction: "+ c.subtraction(0, 0));
+                c.in();
+                System.out.println("Subtraction: " + c.subtraction(0, 0));
                 break;
             case "*":
-            System.out.println("Multiplication: "+ c.multiplication(0, 0));
+                c.in();
+                System.out.println("Multiplication: " + c.multiplication(0, 0));
                 break;
             case "/":
-            System.out.println("Division: "+ c.divide(0, 0));
+                c.in();
+                System.out.println("Division: " + c.divide(0, 0));
+                break;
+            case "#":
+                c.in_root();
+                System.out.println("Root: " + c.squ_are_ro_ot(0));
+                break;
             default:
-            System.out.println("Operation Error Try Again");
+                System.out.println("Operation Error Try Again");
                 break;
         }
 
+        scanop.close();
+
     }
 
-        
 }
