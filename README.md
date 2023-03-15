@@ -1,6 +1,10 @@
 # Distributed-Systems
 A repository contains all the exercises of Distributed Systems course in the Egyptian Chinese University - ECU
 
+### Under the supervision of 
+- Dr Soha Safwat
+- Eng Rahma Ameen
+
 ### AS A PROGRAMMER, WHAT DO YOU DO WHEN YOU GET STUCK?
 - To help you track down that bug, start reading your code aloud. 
 - Pretend that a programmer friend is sitting right next to you. 
