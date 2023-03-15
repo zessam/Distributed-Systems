@@ -99,9 +99,10 @@ public class client {
     {
         String line="";
         while (!line.equals(constants.STOP)) {
-            line = read();
-            System.out.println("Client: " + line);
             write();
+            line = read();
+            System.out.println("Server: " + line);
+            
             
         }
     }
