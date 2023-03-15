@@ -110,12 +110,11 @@ public class server {
 
     private void connecting()
     {
-        String line="";
+        String line ="";
         while (!line.equals(constants.STOP)) {
-            line = read();
-            System.out.println("Client: " + line);
+            line=read();
+            System.out.println("Client: "+line);
             write();
-            
         }
     }
 
